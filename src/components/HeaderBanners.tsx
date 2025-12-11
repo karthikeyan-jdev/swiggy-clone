@@ -1,4 +1,3 @@
-import React from "react";
 import deliveryPerson from "../assets/img/delivery-person.png";
 import { IoIosSearch } from "react-icons/io";
 
