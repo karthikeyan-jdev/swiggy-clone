@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
-import AboutUs from "../pages/AboutUs";
 import Cart from "../pages/Cart";
 import Favories from "../pages/Favories";
 import Login from "../pages/Login";
 import Signin from "../pages/Signin";
+import AboutUs from "../pages/AboutUs";
 
 const swiggyRouter = createBrowserRouter([
   {
