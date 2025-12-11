@@ -27,7 +27,7 @@ const HeaderBanners = () => {
       {/* banner grid */}
       <div className="grid grid-cols-2 gap-4 ">
         <div className="bg-white rounded-xl flex justify-between col-span-2">
-          <div className="flex flex-col gap-1 justify-center p-5">
+          <div className="flex flex-col  justify-center p-5">
             <h4 className="font-bold text-[18px] text-gray-600">
               FOOD DELIVERY
             </h4>
@@ -39,7 +39,7 @@ const HeaderBanners = () => {
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/070/116/360/small/delicious-chicken-biryani-with-garnish-in-white-bowl-on-transparent-background-png.png"
             alt="deliveryPerson"
-            className="w-28 pt-5 rounded-br-xl bg-transparent"
+            className="w-28 pt-6 rounded-br-xl bg-transparent"
           />
         </div>
         <div className="bg-white rounded-xl  ">

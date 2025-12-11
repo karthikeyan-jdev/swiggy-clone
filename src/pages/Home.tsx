@@ -1,13 +1,20 @@
 // import Button from "../components/ui/Button";
 
+import Categories from "../components/FoodCategories";
+import GroceryCategories from "../components/GroceryCategories";
+
 const Home = () => {
   return (
-    <div className="">
-      Home
-      {/* <Button type={"primary"}>contact us</Button>
-      <Button type={"secondary"}>contact us</Button> */}
-    </div>
+    <>
+      <Categories />
+      <GroceryCategories />
+    </>
   );
 };
 
 export default Home;
+
+{
+  /* <Button type={"primary"}>contact us</Button>
+<Button type={"secondary"}>contact us</Button> */
+}
