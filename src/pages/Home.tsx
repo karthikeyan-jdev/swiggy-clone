@@ -2,12 +2,14 @@
 
 import Categories from "../components/FoodCategories";
 import GroceryCategories from "../components/GroceryCategories";
+import Restaurants from "../components/Restaurants";
 
 const Home = () => {
   return (
     <>
       <Categories />
       <GroceryCategories />
+      <Restaurants />
     </>
   );
 };
