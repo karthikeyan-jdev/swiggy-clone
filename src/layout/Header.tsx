@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar.tsx";
-import HeaderBanners from "../components/HeaderBanners.tsx";
+import Navbar from "../components/Navbar";
+import HeaderBanners from "../components/HeaderBanners";
 
 const Header = () => {
   return (
