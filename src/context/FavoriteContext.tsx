@@ -1,4 +1,3 @@
-import React from "react";
 
 const FavoriteContext = () => {
   return <div>FavoriteContext</div>;
