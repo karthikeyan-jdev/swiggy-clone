@@ -14,7 +14,7 @@ import { SiSwiggy } from "react-icons/si";
 const Footer = () => {
   const year: number = new Date().getFullYear();
   return (
-    <div className="bg-[#F0F0F5] p-4 ">
+    <div className="bg-[#F0F0F5] p-4 mb-16 ">
       {/* logo */}
       <div className="space-y-2 my-5">
         <div className="flex items-center gap-2 ">
@@ -64,7 +64,7 @@ const Footer = () => {
           <p>delhi</p>
           <p>Mumbai</p>
           <p>pune</p>
-          <div className="flex items-center gap-6 border p-0.5 w-fit rounded-md">
+          <div className="flex items-center gap-6 border p-px px-1 w-fit rounded-md">
             <p>685 cities </p>
             <FaChevronDown className="mt-1" />
           </div>
@@ -93,23 +93,23 @@ const Footer = () => {
       {/* download option */}
       <div className="mt-12 mb-4">
         <div className="border-t"></div>
-        <p className="my-4 px-8 ">
+        <p className="p-4 text-[13px] text-gray-950">
           For better experience, download the Swiggy app now
         </p>
         <div className="grid grid-cols-2 px-8 ">
           {" "}
-          <div className="flex w-[80%] mx-auto items-center gap-1 p-0.5 text-gray-200 bg-gray-800 rounded-lg">
-            <FaApple size={32} className="m-1" />
+          <div className="flex w-[90%] mx-auto items-center gap-1 p-2 text-gray-200 bg-gray-800 rounded-lg">
+            <FaApple size={34} className="" />
             <div className="">
               <p className="text-[10px]">Download on the</p>
-              <p>Apple Store</p>
+              <p className="min-w-max">Apple Store</p>
             </div>
           </div>
-          <div className="flex w-[80%] mx-auto items-center gap-1 p-0.5 text-gray-200 bg-gray-800 rounded-lg">
-            <FaGooglePlay size={32} className="m-1" />
+          <div className="flex w-[90%] mx-auto items-center gap-1 p-2 text-gray-200 bg-gray-800 rounded-lg">
+            <FaGooglePlay size={32} className="" />
             <div className="">
               <p className="text-[10px]">GET IT ON</p>
-              <p>Google Play</p>
+              <p className="min-w-max">Google Play</p>
             </div>
           </div>
         </div>

@@ -26,8 +26,8 @@ const HeaderBanners = () => {
       </div>
       {/* banner grid */}
       <div className="grid grid-cols-2 gap-4 ">
-        <div className="bg-white rounded-xl flex justify-between col-span-2">
-          <div className="flex flex-col  justify-center p-5">
+        <div className="relative overflow-hidden bg-white rounded-xl flex justify-between col-span-2">
+          <div className="flex flex-col  justify-center p-5 pb-10">
             <h4 className="font-bold text-[18px] text-gray-600">
               FOOD DELIVERY
             </h4>
@@ -39,17 +39,17 @@ const HeaderBanners = () => {
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/070/116/360/small/delicious-chicken-biryani-with-garnish-in-white-bowl-on-transparent-background-png.png"
             alt="deliveryPerson"
-            className="w-28 pt-6 rounded-br-xl bg-transparent"
+            className="w-42 absolute right-[-22px] top-[9px]"
           />
         </div>
-        <div className="bg-white rounded-xl  ">
+        <div className="relative overflow-hidden bg-white rounded-xl  ">
           <div className="flex flex-col justify-center  ">
             <div className="px-4 pt-4 space-y-0.5">
               <h4 className="font-bold text-[18px] text-gray-600 ">
                 INSTANMART
               </h4>
-              <p className="text-gray-500 text-[13px]">THE EVERYTHINGS STORE</p>
-              <p className="text-primary font-semibold text-[13px] px-1">
+              <p className="text-gray-500 text-[12px] min-w-max">THE EVERYTHINGS STORE</p>
+              <p className="text-primary font-semibold text-[12px] px-1">
                 FREE DELIVERY
               </p>
             </div>
@@ -58,17 +58,17 @@ const HeaderBanners = () => {
               <img
                 src="https://static.vecteezy.com/system/resources/thumbnails/054/591/691/small/3d-render-of-cosmetics-products-free-png.png"
                 alt=""
-                className="w-32 h-28 rounded-br-xl ml-auto"
+                className="w-32 h-32 absolute left-[50px] top-[81px]"
               />
             </div>
           </div>
         </div>
-        <div className="bg-white rounded-xl  ">
+        <div className="relative overflow-hidden bg-white rounded-xl  ">
           <div className="flex flex-col justify-center ">
             <div className="px-4 pt-4 space-y-0.5">
               <h4 className="font-bold text-[18px] text-gray-600 ">DINEOUT</h4>
-              <p className="text-gray-500 text-[13px]">EAT OUT & SAVE MORE</p>
-              <p className="text-primary font-semibold text-[13px] px-1">
+              <p className="text-gray-500 text-[12px] min-w-max">EAT OUT & SAVE MORE</p>
+              <p className="text-primary font-semibold text-[12px] px-1">
                 UP TO 50% OFF
               </p>
             </div>
@@ -77,7 +77,7 @@ const HeaderBanners = () => {
               <img
                 src="https://static.vecteezy.com/system/resources/thumbnails/053/204/993/small/cutlery-on-plates-with-beige-napkin-on-transparent-background-free-png.png"
                 alt=""
-                className="w-32 h-28 rounded-br-xl ml-auto"
+                className="w-32 h-28 relative left-[54px] top-[22px]"
               />
             </div>
           </div>
