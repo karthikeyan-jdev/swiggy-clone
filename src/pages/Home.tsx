@@ -3,6 +3,8 @@
 import Categories from "../components/FoodCategories";
 import GroceryCategories from "../components/GroceryCategories";
 import Restaurants from "../components/Restaurants";
+import CityServicesList from "../components/CityServicesList";
+import { FoodServiceCities, GroceryServiceCities } from "../data/LocalArr";
 
 const Home = () => {
   return (
@@ -10,6 +12,14 @@ const Home = () => {
       <Categories />
       <GroceryCategories />
       <Restaurants />
+      <CityServicesList
+        headline={"Cities with food delivery"}
+        cities={FoodServiceCities}
+      />
+      <CityServicesList
+        headline={"Cities with food grocery"}
+        cities={GroceryServiceCities}
+      />
     </>
   );
 };

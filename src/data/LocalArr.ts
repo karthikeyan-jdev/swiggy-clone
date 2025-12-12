@@ -409,5 +409,49 @@ export const restaurantsArr = [
   },
 ];
 
+export const FoodServiceCities = [
+  { id: 1, name: "Bangalore" },
+  { id: 2, name: "Gurgaon" },
+  { id: 3, name: "Hyderabad" },
+  { id: 4, name: "Delhi" },
+  { id: 5, name: "Mumbai" },
+  { id: 6, name: "Pune" },
+  { id: 7, name: "Kolkata" },
+  { id: 8, name: "Chennai" },
+  { id: 9, name: "Ahmedabad" },
+  { id: 10, name: "Chandigarh" },
+  { id: 11, name: "Jaipur" },
+  { id: 12, name: "Kochi" },
+  { id: 13, name: "Coimbatore" },
+  { id: 14, name: "Lucknow" },
+  { id: 15, name: "Nagpur" },
+  { id: 16, name: "Vadodara" },
+  { id: 17, name: "Indore" },
+  { id: 18, name: "Guwahati" },
+  { id: 19, name: "Vizag" },
+  { id: 20, name: "Surat" }
+];
+export const GroceryServiceCities = [
+  { id: 1, name: "Bangalore" },
+  { id: 2, name: "Gurgaon" },
+  { id: 3, name: "Hyderabad" },
+  { id: 4, name: "Delhi" },
+  { id: 5, name: "Mumbai" },
+  { id: 6, name: "Pune" },
+  { id: 7, name: "Kolkata" },
+  { id: 8, name: "Chennai" },
+  { id: 9, name: "Ahmedabad" },
+  { id: 10, name: "Chandigarh" },
+  { id: 11, name: "Jaipur" },
+  { id: 12, name: "Kochi" },
+  { id: 13, name: "Coimbatore" },
+  { id: 14, name: "Lucknow" },
+  { id: 15, name: "Nagpur" },
+  { id: 16, name: "Vadodara" },
+  { id: 17, name: "Indore" },
+  { id: 18, name: "Guwahati" },
+  { id: 19, name: "Vizag" },
+  { id: 20, name: "Surat" }
+];
 
 
