@@ -2,9 +2,11 @@ import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 const CityServicesList = ({
+  prefix,
   headline,
   cities,
 }: {
+  prefix: string;
   headline: string;
   cities: { id: number; name: string }[];
 }) => {
@@ -18,8 +20,11 @@ const CityServicesList = ({
         {cities.slice(0, count).map((city) => {
           return (
             <div className="" key={city.id}>
-              <button className="p-3 border border-gray-400 text-gray-700 text-[14px] rounded-2xl w-full ">
-                {city.name}
+              <button className="p-3 w-full h-full border border-gray-400 text-gray-700 text-[12px] rounded-2xl">
+                <p className="w-[75%] mx-auto ">
+                  {prefix}
+                  {city.name}
+                </p>
               </button>
             </div>
           );
@@ -30,7 +35,7 @@ const CityServicesList = ({
         onClick={() => {
           setCount((pre) => pre + 6);
         }}
-        className="flex items-center justify-center gap-1 border border-amber-600 text-orange-400 w-full mt-4 p-3 rounded-2xl"
+        className="flex items-center justify-center gap-1 border border-amber-600 text-primary w-full mt-4 p-3 rounded-2xl"
       >
         <p className="text-[16px]"> Show More </p>{" "}
         <FaChevronDown size={15} className="mt-1" />

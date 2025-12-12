@@ -13,10 +13,12 @@ const Home = () => {
       <GroceryCategories />
       <Restaurants />
       <CityServicesList
+        prefix="Order food online in "
         headline={"Cities with food delivery"}
         cities={FoodServiceCities}
       />
       <CityServicesList
+        prefix="Order food online in "
         headline={"Cities with food grocery"}
         cities={GroceryServiceCities}
       />
