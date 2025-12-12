@@ -27,7 +27,7 @@ const HeaderBanners = () => {
       {/* banner grid */}
       <div className="grid grid-cols-2 gap-4 ">
         <div className="relative overflow-hidden bg-white rounded-xl flex justify-between col-span-2">
-          <div className="flex flex-col  justify-center p-5 pb-10">
+          <div className="flex flex-col  justify-center p-6 pb-10">
             <h4 className="font-bold text-[18px] text-gray-600">
               FOOD DELIVERY
             </h4>
@@ -39,7 +39,7 @@ const HeaderBanners = () => {
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/070/116/360/small/delicious-chicken-biryani-with-garnish-in-white-bowl-on-transparent-background-png.png"
             alt="deliveryPerson"
-            className="w-42 absolute right-[-22px] top-[9px]"
+            className="w-44 h-45 absolute right-[-30px] top-[px]"
           />
         </div>
         <div className="relative overflow-hidden bg-white rounded-xl  ">
@@ -58,7 +58,7 @@ const HeaderBanners = () => {
               <img
                 src="https://static.vecteezy.com/system/resources/thumbnails/054/591/691/small/3d-render-of-cosmetics-products-free-png.png"
                 alt=""
-                className="w-32 h-32 absolute left-[50px] top-[81px]"
+                className="w-42 h-35 absolute right-[-19px] top-[78px]"
               />
             </div>
           </div>
@@ -77,7 +77,7 @@ const HeaderBanners = () => {
               <img
                 src="https://static.vecteezy.com/system/resources/thumbnails/053/204/993/small/cutlery-on-plates-with-beige-napkin-on-transparent-background-free-png.png"
                 alt=""
-                className="w-32 h-28 relative left-[54px] top-[22px]"
+                className="w-40 h-30 relative right-[-83px] top-[20px]"
               />
             </div>
           </div>
