@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
         </div>
         {/* download option */}
-        <div className="border-t mt-12 sm:flex sm:justify-center gap-2 md:gap-4 p-4 lg:p-5">
+        <div className="border-t mt-12 sm:flex sm:justify-center gap-2 md:gap-4 sm:p-4 lg:p-5">
           <p className="p-4 text-[14px] sm:text-[16px] font-semibold text-gray-950 text-center sm:min-w-max">
             For better experience, download the Swiggy app now
           </p>
