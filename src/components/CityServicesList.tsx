@@ -12,34 +12,36 @@ const CityServicesList = ({
 }) => {
   const [count, setCount] = useState(6);
   return (
-    <div className=" p-4">
-      <h4 className="font-bold text-[19px] text-gray-700 px-2 my-4">
+    <div className=" container-section">
+      <h4 className="headline">
         {headline}
       </h4>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {cities.slice(0, count).map((city) => {
           return (
             <div className="" key={city.id}>
-              <button className="p-3 w-full h-full border border-gray-400 text-gray-700 text-[12px] rounded-2xl">
+              <button className="p-3 w-full h-full border border-gray-400 text-gray-700 text-[12px] md:text-[14px] font-semibold rounded-2xl">
                 <p className="w-[75%] mx-auto ">
                   {prefix}
                   {city.name}
                 </p>
               </button>
+              
             </div>
           );
         })}
-      </div>
-
-      <button
+          <button
         onClick={() => {
           setCount((pre) => pre + 6);
         }}
-        className="flex items-center justify-center gap-1 border border-amber-600 text-primary w-full mt-4 p-3 rounded-2xl"
+        className="col-span-2 md:col-span-1 p-[9px] flex items-center justify-center gap-1 border border-amber-600 text-primary w-full  rounded-2xl"
       >
         <p className="text-[16px]"> Show More </p>{" "}
         <FaChevronDown size={15} className="mt-1" />
       </button>
+      </div>
+
+    
     </div>
   );
 };
