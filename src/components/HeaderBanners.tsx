@@ -20,7 +20,7 @@ const HeaderBanners = () => {
                 placeholder="Search for restaurant, item or more"
                 className="text-[14px] py-[5px] md:py-[9px] lg:py-[13px] md:w-full"
               />
-              <FaChevronDown className="text-gray-700 text-[18px] md:text-[22px] " />
+              <FaChevronDown className="text-gray-700 text-[18px] md:text-[22px]" />
             </div>
           </div>
           {/* seacrh bar 2 */}
