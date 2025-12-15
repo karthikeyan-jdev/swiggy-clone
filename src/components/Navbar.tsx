@@ -4,7 +4,7 @@ import { IoMdPerson } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <nav className=" flex justify-between p-2 border-b border-gray-50 ">
+    <nav className="px-4 md:px-0 md:w-[90%] lg:w-[80%] md:mx-auto flex justify-between p-2 border-b border-gray-50 ">
       <div className="flex items-center gap-1.5 text-white ">
         <span className="text-[20px]">
           <HiMiniHome />

@@ -14,7 +14,7 @@ const CityServicesList = ({
     return window.innerWidth < 768 ? 6 : 11;
   };
 
-  const [count, setCount] = useState(getCountByWidth);
+  const [count, setCount] = useState(6);
 
   useEffect(() => {
     const updateCount = () => {

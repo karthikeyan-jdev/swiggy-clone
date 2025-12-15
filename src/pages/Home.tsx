@@ -8,7 +8,7 @@ import { FoodServiceCities, GroceryServiceCities } from "../data/LocalArr";
 
 const Home = () => {
   return (
-    <>
+    <div className="">
       <Categories />
       <GroceryCategories />
       <Restaurants />
@@ -22,7 +22,7 @@ const Home = () => {
         headline={"Cities with food grocery"}
         cities={GroceryServiceCities}
       />
-    </>
+    </div>
   );
 };
 
