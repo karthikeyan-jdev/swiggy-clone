@@ -1,6 +1,6 @@
 import { GrFormNextLink } from "react-icons/gr";
 
-const BannerGrid = ({ item }) => {
+const BannerGrid = ({ item }: any) => {
   return (
     <div
       className={`relative overflow-hidden bg-white rounded-4xl  ${item.cardClass}`}
