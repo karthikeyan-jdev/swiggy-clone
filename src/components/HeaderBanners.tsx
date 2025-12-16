@@ -4,6 +4,7 @@ import BannerGrid from "./BannerGrid";
 import { serviceCards } from "../data/LocalArr";
 import { FaChevronDown } from "react-icons/fa";
 import { GrLocation } from "react-icons/gr";
+import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
 
 const HeaderBanners = () => {
   return (
@@ -30,7 +31,7 @@ const HeaderBanners = () => {
               placeholder="Search for restaurant, item or more"
               className="text-[14px] py-[5px] w-full"
             />
-            <IoIosSearch  color="gray" className="text-[28px] md:text-[30px]" />
+            <IoIosSearch color="gray" className="text-[28px] md:text-[30px]" />
           </div>
         </div>
         {/* text & delivary image */}
@@ -46,10 +47,18 @@ const HeaderBanners = () => {
         </div>
       </div>
       {/* banner grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
-        {serviceCards.map((item) => (
-          <BannerGrid item={item} />
-        ))}
+      <div className="">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
+          {serviceCards.map((item) => (
+            <BannerGrid item={item} />
+          ))}
+        </div>
+        <div className="hidden md:block mt-6">
+          <div className="text-gray-500 bg-gray-50 md:text-[18px] lg:text-[20px] flex items-center justify-between">
+            <VscTriangleLeft />
+            <VscTriangleRight />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const Footer = () => {
   const year: number = new Date().getFullYear();
   return (
     <div className="bg-[#F0F0F5]">
-      <div className=" container-section mt-8 mb-16 p-4 ">
+      <div className=" container-section mt-8 mb-16 md:mb-0 p-4 ">
         {/*grid - footer */}
         <div className=" grid grid-cols-2  gap-4 md:grid-cols-5">
           {/* logo */}

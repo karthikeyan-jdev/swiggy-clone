@@ -14,7 +14,7 @@ const MainLayout = () => {
         </main>
         <Footer />
       </div>
-      <div className="fixed bottom-0 flex justify-around w-full mx-auto bg-gray-50">
+      <div className="md:hidden fixed bottom-0 flex justify-around w-full mx-auto bg-gray-50">
         <button className="p-2 flex flex-col gap-0.5 items-center">
           <SiSwiggy size={20} className="text-gray-500" />
           <p className="text-[12px]">SWIGGY</p>{" "}
