@@ -7,8 +7,8 @@ import { GrLocation } from "react-icons/gr";
 
 const HeaderBanners = () => {
   return (
-    <div className="container-section sm:space-y-14 ">
-      <div className="flex flex-col md:flex-col-reverse sm:w-[96%] md:w-[80%] lg:w-[90%] xl:w-[80%] mx-auto">
+    <div className="container-section sm:space-y-10 ">
+      <div className="flex flex-col md:flex-col-reverse gap-4 sm:w-[96%] md:w-[80%] lg:w-[90%] xl:w-[70%] mx-auto">
         {/* search inputs */}
         <div className="md:flex md:gap-3 md:justify-center ">
           {/* seacrh bar 1 */}
@@ -34,8 +34,8 @@ const HeaderBanners = () => {
           </div>
         </div>
         {/* text & delivary image */}
-        <div className="flex justify-between md:justify-center p-3">
-          <h4 className="text-[15px] sm:text-[20px] mt-2 md:text-[32px] lg:text-[40px] xl:text-[48px] font-bold text-white md:text-center sm:w-[70%] md:w-auto">
+        <div className="flex justify-between md:justify-center p-3 md:p-0">
+          <h4 className="text-[15px] sm:text-[20px] mt-2 md:text-[32px] lg:text-[40px] xl:text-[48px] font-bold text-white md:text-center sm:w-[70%] lg:w-[80%] xl:w-auto md:w-auto">
             Order food & groceries. Discover best restaurants. Swiggy it!
           </h4>
           <img

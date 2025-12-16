@@ -56,7 +56,7 @@ const Footer = () => {
             <p>Cookie Policy</p>
             <p>Privacy Policy</p>
           </div>
-          <div className="text-gray-600 text-[14px] space-y-2">
+          <div className="text-gray-600 text-[14px] space-y-2 md:rows-span-2">
             <h4 className="text-[18px] text-black font-semibold">
               Available in:
             </h4>
