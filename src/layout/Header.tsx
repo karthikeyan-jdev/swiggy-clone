@@ -6,6 +6,7 @@ const Header = () => {
     <div className="bg-primary h-fit pb-5 md:pb-8">
       <Navbar />
       <HeaderBanners />
+      
     </div>
   );
 };

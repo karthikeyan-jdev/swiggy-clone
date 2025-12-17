@@ -2,8 +2,10 @@ import { FaChevronDown } from "react-icons/fa";
 import { HiMiniHome } from "react-icons/hi2";
 import { IoMdPerson } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="px-4 py-4 md:pt-8  md:px-0 md:w-[90%] lg:w-[80%] md:mx-auto flex justify-between items-center border-b border-gray-50 md:border-0">
       {/* below md text */}
@@ -21,7 +23,7 @@ const Navbar = () => {
         <img
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
           alt="logo"
-          className="w-44"
+          className="w-40 lg:w-44"
         />
       </div>
       {/* below md text */}
@@ -30,14 +32,21 @@ const Navbar = () => {
       </div>
       {/* above md text */}
 
-      <div className="hidden md:block">
-        <div className=" md:flex gap-3 items-center text-white md:text-[15px] lg:text-[18px] font-bold">
+      <div className="hidden md:block min-w-max">
+        <div className=" md:flex md:gap-3 lg:gap-5 xl:gap-7 items-center text-white md:text-[15px] lg:text-[18px] font-bold">
           <p>Swiggy Corporate</p>
           <p>Partner with us</p>
-          <button className="flex items-center gap-2 px-3 py-1.5 border border-white rounded-xl `">
+          <button
+            // onClick={() => {
+            //   navigate("/downloadApp");
+            // }}
+            className="flex items-center gap-2 md:px-3.5 md:py-2.5 lg:px-6.5 lg:py-3.5 border border-white rounded-xl `"
+          >
             <p>Get the app</p> <MdArrowOutward />
           </button>
-          <button className="bg-black px-5 py-1.5 rounded-xl">sign in</button>
+          <button className="bg-black md:px-4 md:py-2.5 lg:px-9.5 lg:py-4 rounded-xl">
+            Sign in
+          </button>
         </div>
       </div>
     </nav>

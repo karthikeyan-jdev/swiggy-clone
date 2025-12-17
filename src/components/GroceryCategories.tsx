@@ -1,11 +1,11 @@
-import { GroceryCategoriesArr } from "../data/LocalArr";
+import { groceryCategoriesArr } from "../data/GroceryCategoriesArr";
 
 const GroceryCategories = () => {
   return (
     <div className="container-section ">
       <h5 className="headline">Order our best food options</h5>
       <div className="flex gap-4 md:gap-10 pt-1 px-1 overflow-x-auto scrollbar-hide">
-        {GroceryCategoriesArr.map((cat) => (
+        {groceryCategoriesArr.map((cat) => (
           <div key={cat.id}>
             <div className="w-[100px] md:w-[126px] lg:w-[170px] xl:w-[190px]">
               <img

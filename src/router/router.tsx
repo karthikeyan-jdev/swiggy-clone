@@ -5,6 +5,7 @@ import Cart from "../pages/Cart";
 import Favories from "../pages/Favories";
 import Login from "../pages/Login";
 import Signin from "../pages/Signin";
+import DownloadApp from "../components/DownloadApp";
 
 const swiggyRouter = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const swiggyRouter = createBrowserRouter([
       {
         path: "Signin",
         element: <Signin />,
+      },
+      {
+        path: "downloadApp",
+        element: <DownloadApp />,
       },
     ],
   },

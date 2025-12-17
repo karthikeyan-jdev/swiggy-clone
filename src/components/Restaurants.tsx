@@ -1,14 +1,14 @@
 import { SlNote } from "react-icons/sl";
-import { restaurantsArr } from "../data/LocalArr";
 import { FaStar } from "react-icons/fa";
+import { restaurantsArr } from "../data/RestaurantsArr";
 
 const Restaurants = () => {
   return (
     <div className="container-section ">
       <h4 className="headline pb-2">Discover best restaurants on Dineout</h4>
       <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide rounded-xl">
-        {restaurantsArr.map((item) => (
-          <div key={item.id} className="shadow rounded-xl bg-white">
+        {restaurantsArr.map((item,i) => (
+          <div key={i} className="shadow rounded-xl bg-white">
             {/* image */}
             <div
               className="flex justify-between items-end p-2.5 w-[290px] h-[155px] md:w-[310px] 
@@ -40,9 +40,9 @@ const Restaurants = () => {
               </div>
               <p className="flex items-center gap-1 bg-gray-100 text-gray-600 w-fit  rounded-lg p-0.5 px-2 text-[11px]">
                 <span className="text-[10px]">
-                  <SlNote />
+                  <SlNote  />
                 </span>
-                <p> Table booking</p>
+                <span> Table booking</span>
               </p>
               {item.offer && (
                 <p className="text-green-600 bg-green-200 rounded-lg text-[13px] px-1.5">

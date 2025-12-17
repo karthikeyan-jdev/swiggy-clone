@@ -4,7 +4,9 @@ import Categories from "../components/FoodCategories";
 import GroceryCategories from "../components/GroceryCategories";
 import Restaurants from "../components/Restaurants";
 import CityServicesList from "../components/CityServicesList";
-import { FoodServiceCities, GroceryServiceCities } from "../data/LocalArr";
+import DownloadApp from "../components/DownloadApp";
+import { foodServiceCities } from "../data/FoodServiceCities";
+import { groceryServiceCities } from "../data/GroceryServiceCities";
 
 const Home = () => {
   return (
@@ -12,15 +14,16 @@ const Home = () => {
       <Categories />
       <GroceryCategories />
       <Restaurants />
+      <DownloadApp/>
       <CityServicesList
         prefix="Order food online in "
         headline={"Cities with food delivery"}
-        cities={FoodServiceCities}
+        cities={foodServiceCities}
       />
       <CityServicesList
         prefix="Order food online in "
         headline={"Cities with food grocery"}
-        cities={GroceryServiceCities}
+        cities={groceryServiceCities}
       />
     </div>
   );
