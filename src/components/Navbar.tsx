@@ -2,10 +2,10 @@ import { FaChevronDown } from "react-icons/fa";
 import { HiMiniHome } from "react-icons/hi2";
 import { IoMdPerson } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <nav className="px-4 py-4 md:pt-8  md:px-0 md:w-[90%] lg:w-[80%] md:mx-auto flex justify-between items-center border-b border-gray-50 md:border-0">
       {/* below md text */}
