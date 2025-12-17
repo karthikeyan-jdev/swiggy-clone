@@ -11,7 +11,7 @@ import { TbXboxXFilled } from "react-icons/tb";
 const HeaderBanners = () => {
   // const { data, error, loading } = useApi("/api/service-cards");
 
-  //   if (error) return <p className="text-white">{error}</p>;
+    // if (error) return <p className="text-white">{error}</p>;
   return (
     <div className=" container-section sm:space-y-10 ">
       <div className="flex flex-col md:flex-col-reverse gap-4 sm:w-[96%] md:w-[80%] lg:w-[90%] xl:w-[70%] mx-auto">
