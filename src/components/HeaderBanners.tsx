@@ -6,12 +6,11 @@ import { GrLocation } from "react-icons/gr";
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
 // import useApi from "../hooks/useFetch";
 import { serviceCards } from "../data/ServiceCards";
-import { TbXboxXFilled } from "react-icons/tb";
 
 const HeaderBanners = () => {
   // const { data, error, loading } = useApi("/api/service-cards");
 
-    // if (error) return <p className="text-white">{error}</p>;
+  // if (error) return <p className="text-white">{error}</p>;
   return (
     <div className=" container-section sm:space-y-10 ">
       <div className="flex flex-col md:flex-col-reverse gap-4 sm:w-[96%] md:w-[80%] lg:w-[90%] xl:w-[70%] mx-auto">
@@ -67,39 +66,7 @@ const HeaderBanners = () => {
         </div>
       </div>
 
-      {/* login */}
-      <div className="bg-white absolute h-screen top-0 right-0 px-12 pt-4 w-[35%] ">
-        <div className="w-[75%]">
-          <TbXboxXFilled className="text-[34px] my-5" />
-          <div className="flex justify-between ">
-            <div className="space-y-2">
-              <h1 className="font-semibold text-[28px]">Login</h1>
-              <p>
-                or <span className="text-primary">ceate an account</span>
-              </p>
-            </div>
-            <img
-              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r"
-              alt=""
-              className="w-24"
-            />
-          </div>
-          <div className="space-y-1 mt-14">
-            <div className="flex flex-col gap-4 ">
-              <input
-                type="text"
-                placeholder="Phone number"
-                className="outline outline-gray-400 p-4 block"
-              />
-              <button className="bg-primary py-4">LOGIN</button>
-            </div>
-            <p className="text-[14px] font-semibold">
-              By clicking on Login, I accept the Terms & Conditions & Privacy
-              Policy
-            </p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

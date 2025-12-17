@@ -1,11 +1,15 @@
+import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { HiMiniHome } from "react-icons/hi2";
-import { IoMdPerson } from "react-icons/io";
+import { IoMdArrowBack, IoMdPerson } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
+import { TbXboxXFilled } from "react-icons/tb";
 // import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   // const navigate = useNavigate();
+  const [slideBar, setSlideBar] = useState(false);
+
   return (
     <nav className="px-4 py-4 md:pt-8  md:px-0 md:w-[90%] lg:w-[80%] md:mx-auto flex justify-between items-center border-b border-gray-50 md:border-0">
       {/* below md text */}
@@ -44,9 +48,56 @@ const Navbar = () => {
           >
             <p>Get the app</p> <MdArrowOutward />
           </button>
-          <button className="bg-black md:px-4 md:py-2.5 lg:px-9.5 lg:py-4 rounded-xl">
+          <button
+            onClick={() => setSlideBar(true)}
+            className="bg-black md:px-4 md:py-2.5 lg:px-9.5 lg:py-4 rounded-xl"
+          >
             Sign in
           </button>
+        </div>
+      </div>
+      {/* login */}
+      <div
+        className={` bg-white absolute h-screen top-0 right-0 px-6 md:px-12 pt-4 lg:w-[550px] xl:w-[600px] z-10 transition-all duration-200 ease-in-out ${
+          slideBar ? "translate-x-0 " : "translate-x-150"
+        }`}
+      >
+        <div className="w-full sm:w-[90%] md:w-[80%]">
+          <IoMdArrowBack
+            className="text-[30px] my-5 md:hidden"
+            onClick={() => setSlideBar(false)}
+          />
+          <TbXboxXFilled
+            className="text-[34px] my-5 hidden md:block"
+            onClick={() => setSlideBar(false)}
+          />
+          <div className="flex justify-between ">
+            <div className="space-y-2">
+              <h1 className="font-semibold text-[28px]">Login</h1>
+              <p>
+                or <span className="text-primary">ceate an account</span>
+              </p>
+            </div>
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r"
+              alt=""
+              className="w-24"
+            />
+          </div>
+          <div className="space-y-1 mt-14">
+            <div className="flex flex-col gap-4 ">
+              <input
+                type="text"
+                placeholder="Phone number"
+                className="outline outline-gray-400 p-4 block"
+              />
+              <button className="bg-primary py-4">LOGIN</button>
+            </div>
+            <p className="text-[14px] font-semibold">
+              By clicking on Login, I accept the Terms & Conditions & Privacy
+              Policy
+            </p>
+          </div>
         </div>
       </div>
     </nav>
