@@ -11,7 +11,7 @@ const Navbar = () => {
   const [slideBar, setSlideBar] = useState(false);
 
   return (
-    <nav className="px-4 py-4 md:pt-8  md:px-0 md:w-[90%] lg:w-[80%] md:mx-auto flex justify-between items-center border-b border-gray-50 md:border-0">
+    <nav className="relative px-4 py-4 md:pt-8  md:px-0 md:w-[90%] lg:w-[80%] md:mx-auto flex justify-between items-center border-b border-gray-50 md:border-0">
       {/* below md text */}
       <div className="md:hidden flex items-center gap-1.5 text-white ">
         <span className="text-[20px]">
@@ -32,7 +32,10 @@ const Navbar = () => {
       </div>
       {/* below md text */}
       <div className="md:hidden flex items-center justify-center bg-black p-2 rounded-full">
-        <IoMdPerson className="text-white text-xl" />
+        <IoMdPerson
+          className="text-white text-xl"
+          onClick={() => setSlideBar(true)}
+        />
       </div>
       {/* above md text */}
 
@@ -57,10 +60,25 @@ const Navbar = () => {
         </div>
       </div>
       {/* login */}
+      {/* Overlay */}
       <div
-        className={` bg-white absolute h-screen top-0 right-0 px-6 md:px-12 pt-4 lg:w-[550px] xl:w-[600px] z-10 transition-all duration-200 ease-in-out ${
-          slideBar ? "translate-x-0 " : "translate-x-150"
-        }`}
+        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300
+      ${
+        slideBar
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+      }
+    `}
+        onClick={() => setSlideBar(false)}
+      />
+      {/* slider */}
+      <div
+        className={` bg-white fixed h-screen top-0 right-0 px-6 md:px-12 pt-4 lg:w-[550px] xl:w-[600px] 
+          z-50  transform transition-transform duration-300 ease-in-out ${
+            slideBar
+              ? "translate-x-0 opacity-100"
+              : "translate-x-full opacity-70"
+          }`}
       >
         <div className="w-full sm:w-[90%] md:w-[80%]">
           <IoMdArrowBack
