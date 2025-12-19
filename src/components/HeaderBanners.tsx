@@ -15,7 +15,7 @@ const HeaderBanners = () => {
     <div className=" container-section sm:space-y-10 ">
       <div className="flex flex-col md:flex-col-reverse gap-4 sm:w-[96%] md:w-[80%] lg:w-[90%] xl:w-[70%] mx-auto">
         {/* search inputs */}
-        <div className="md:flex md:gap-3 md:justify-center text-gray-400 font-semibold">
+        <div className="md:flex md:gap-3 md:justify-center text-gray-400 font-semibold ">
           {/* seacrh bar 1 */}
           <div className=" hidden md:block  ">
             <div className="bg-white p-2 my-4 rounded-xl flex items-center justify-between gap-2.5 px-3">
@@ -23,7 +23,7 @@ const HeaderBanners = () => {
               <input
                 type="text"
                 placeholder="Enter your delivery location"
-                className="text-[14px] lg:text-[16px] py-[5px] md:py-[9px] md:w-full"
+                className="text-[14px] lg:text-[16px] py-[5px] md:py-[9px] md:w-full outline-0"
               />
               <FaChevronDown className="text-gray-700 text-[18px] md:text-[22px]" />
             </div>
@@ -33,7 +33,7 @@ const HeaderBanners = () => {
             <input
               type="text"
               placeholder="Search for restaurant, item or more"
-              className="text-[14px] lg:text-[16px] py-[5px] md:py-[9px] p-2 w-full"
+              className="text-[14px] lg:text-[16px] py-[5px] md:py-[9px] p-2 w-full outline-0"
             />
             <IoIosSearch color="gray" className="text-[28px] md:text-[30px]" />
           </div>

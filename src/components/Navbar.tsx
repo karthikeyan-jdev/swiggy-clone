@@ -38,7 +38,6 @@ const Navbar = () => {
         />
       </div>
       {/* above md text */}
-
       <div className="hidden md:block min-w-max">
         <div className=" md:flex md:gap-3 lg:gap-5 xl:gap-7 items-center text-white md:text-[15px] lg:text-[18px] font-bold">
           <p>Swiggy Corporate</p>
