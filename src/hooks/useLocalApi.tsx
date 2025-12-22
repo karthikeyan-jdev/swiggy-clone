@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 // type myFunType = () => Promise<any>;
 
-export default function useLocalApi(localFunction: () => Promise<any>) {
-  const [data, setData] = useState<any[] >([]);
-  const [loading, setLoading] = useState(true);
+export default function useLocalApi<T>(localFunction: () => Promise<T>) {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     let isMounted = true;
@@ -16,8 +16,10 @@ export default function useLocalApi(localFunction: () => Promise<any>) {
       })
       .finally(() => {
         if (isMounted) setLoading(false);
-      })
-      return()=>{isMounted=false}
+      });
+    return () => {
+      isMounted = false;
+    };
   }, [localFunction]);
 
   return {

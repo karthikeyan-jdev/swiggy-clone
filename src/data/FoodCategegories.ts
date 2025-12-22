@@ -1,4 +1,9 @@
-export const FoodCategoriesData = {
+export type FoodCategory = {
+  id: number;
+  name: string;
+  image: string;
+};
+export const FoodCategoriesData: FoodCategoriesResponse = {
   top: [
     {
       id: 1,
@@ -124,12 +129,11 @@ export const FoodCategoriesData = {
     },
   ],
 };
-
-  type FoodCategoriesResponse = {
-    top: any[];
-    more: any[];
-  };
-export const getFoodCategories = async (): Promise<any> => {
+export type FoodCategoriesResponse = {
+  top: FoodCategory[];
+  more: FoodCategory[];
+};
+export const getFoodCategories = async (): Promise<FoodCategoriesResponse> => {
   return await new Promise((resolve) => {
     setTimeout(() => {
       resolve(FoodCategoriesData);

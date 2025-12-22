@@ -1,16 +1,23 @@
-import { getFoodCategories } from "../data/FoodCategegories";
+import {
+  getFoodCategories,
+  type FoodCategoriesResponse,
+} from "../data/FoodCategegories";
 import useLocalApi from "../hooks/useLocalApi";
 import Loading from "./Loading";
 
 const FoodCategories = () => {
-  const {
-    data: { top, more },
-    loading,
-  } = useLocalApi(getFoodCategories); // promise function
+  const { data, loading } =
+    useLocalApi<FoodCategoriesResponse>(getFoodCategories); // promise function
+  if (loading) {
+    return <Loading />;
+  }
 
-  return loading ? (
-    <Loading />
-  ) : (
+  if (!data) {
+    return null;
+  }
+
+  const { top, more } = data;
+  return (
     <div className="container-section">
       <h5 className="headline">Order our best food options</h5>
       <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide pt-1 px-1">
