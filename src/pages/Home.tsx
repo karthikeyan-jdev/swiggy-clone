@@ -14,7 +14,7 @@ const Home = () => {
       <Categories />
       <GroceryCategories />
       <Restaurants />
-      <DownloadApp/>
+      <DownloadApp />
       <CityServicesList
         prefix="Order food online in "
         headline={"Cities with food delivery"}

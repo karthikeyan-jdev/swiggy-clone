@@ -38,11 +38,11 @@ const CityServicesList = ({
         {cities.slice(0, count).map((city) => {
           return (
             <div className="" key={city.id}>
-              <button className="p-3 w-full h-full border border-gray-400 text-gray-700 text-[12px] md:text-[14px] font-semibold rounded-2xl">
+              <button className="p-2 md:p-3 w-full h-full border border-gray-400 text-gray-700 text-[12px] md:text-[14px] font-semibold rounded-2xl">
                 <p className="w-[75%] mx-auto ">
                   {prefix}
                   {city.name}
-                </p>
+                </p>``
               </button>
             </div>
           );
@@ -51,7 +51,7 @@ const CityServicesList = ({
           onClick={handleCount}
           className="col-span-2 md:col-span-1 p-[9px] flex items-center justify-center gap-1 border border-amber-600 text-primary w-full  rounded-2xl"
         >
-          <p className="text-[16px]"> Show More </p>{" "}
+          <p className="text-[13px] md:text-[16px]"> Show More </p>{" "}
           <FaChevronDown size={15} className="mt-1" />
         </button>
       </div>
