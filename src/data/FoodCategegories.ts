@@ -125,6 +125,10 @@ export const FoodCategoriesData = {
   ],
 };
 
+  type FoodCategoriesResponse = {
+    top: any[];
+    more: any[];
+  };
 export const getFoodCategories = async (): Promise<any> => {
   return await new Promise((resolve) => {
     setTimeout(() => {
