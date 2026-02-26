@@ -1,11 +1,24 @@
-import { groceryCategoriesArr } from "../data/GroceryCategoriesArr";
+import { getFoodCategories } from "../data/GroceryCategoriesArr";
+import useLocalApi from "../hooks/useLocalApi";
+import SkeletonCard from "./SkeletonCard";
 
 const GroceryCategories = () => {
+  const { data, loading } = useLocalApi(getFoodCategories);
+  if (loading) {
+    return (
+      <SkeletonCard
+        headline="Shop groceries on Instamart"
+        show={false}
+        room="w-[100px] md:w-[126px] lg:w-[170px] h-[100px] md:h-[126px] lg:h-[170px]"
+      />
+    );
+  }
+
   return (
     <div className="container-section ">
-      <h5 className="headline">Order our best food options</h5>
+      <h5 className="headline">Shop groceries on Instamart</h5>
       <div className="flex gap-4 md:gap-10 pt-1 px-1 overflow-x-auto scrollbar-hide">
-        {groceryCategoriesArr.map((cat) => (
+        {data?.map((cat) => (
           <div key={cat.id}>
             <div className="w-[100px] md:w-[126px] lg:w-[170px] xl:w-[190px]">
               <img

@@ -1,4 +1,11 @@
-export const groceryCategoriesArr = [
+export type FoodCategory = { // this for both top and more categories
+  id: number; 
+  name: string;
+  image: string;
+};
+
+
+export const groceryCategoriesArr: FoodCategory[] = [
   {
     id: 1,
     name: "Fresh Vegetables",
@@ -138,3 +145,11 @@ export const groceryCategoriesArr = [
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/NI_CATALOG/IMAGES/CIW/2025/5/14/705173ff-7cd9-4d7e-9e5b-3886d81411b9_bb324827-9556-48e4-b8f6-280706478fe2",
   },
 ];
+
+export const getFoodCategories = async (): Promise<FoodCategory[]> => {
+  return await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(groceryCategoriesArr);
+    }, 2500);
+  });
+};

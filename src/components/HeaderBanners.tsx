@@ -4,15 +4,15 @@ import BannerGrid from "./BannerGrid";
 import { FaChevronDown } from "react-icons/fa";
 import { GrLocation } from "react-icons/gr";
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
-// import useApi from "../hooks/useFetch";
-import { serviceCards } from "../data/ServiceCards";
+import { getServiceCard } from "../data/ServiceCards";
+import useLocalApi from "../hooks/useLocalApi";
+import SkeletonServiceCard from "./SkeletonServiceCard";
 
 const HeaderBanners = () => {
-  // const { data, error, loading } = useApi("/api/service-cards");
+  const { data, loading } = useLocalApi(getServiceCard);
 
-  // if (error) return <p className="text-white">{error}</p>;
   return (
-    <div className=" container-section sm:space-y-10 ">
+    <div className=" container-section sm:space-y-10">
       <div className="flex flex-col md:flex-col-reverse gap-4 sm:w-[96%] md:w-[80%] lg:w-[90%] xl:w-[70%] mx-auto">
         {/* search inputs */}
         <div className="md:flex md:gap-3 md:justify-center text-gray-400 font-semibold ">
@@ -51,22 +51,24 @@ const HeaderBanners = () => {
         </div>
       </div>
       {/* 3 banner grid */}
-      <div className="">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
-          {serviceCards.map((item) => (
-            <BannerGrid key={item.id} item={item} />
-          ))}
-        </div>
+      {loading ? (
+        <SkeletonServiceCard />
+      ) : (
+        <div className="">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
+            {data?.map((item) => (
+              <BannerGrid key={item.id} item={item} />
+            ))}
+          </div>
 
-        <div className="hidden md:block mt-6">
-          <div className="text-gray-500 bg-gray-50 md:text-[18px] lg:text-[20px] flex items-center justify-between">
-            <VscTriangleLeft />
-            <VscTriangleRight />
+          <div className="hidden md:block mt-6">
+            <div className="text-gray-500 bg-gray-50 md:text-[18px] lg:text-[20px] flex items-center justify-between rounded-xl">
+              <VscTriangleLeft />
+              <VscTriangleRight />
+            </div>
           </div>
         </div>
-      </div>
-
-      
+      )}
     </div>
   );
 };

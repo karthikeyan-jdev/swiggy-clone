@@ -3,20 +3,25 @@ import {
   type FoodCategoriesResponse,
 } from "../data/FoodCategegories";
 import useLocalApi from "../hooks/useLocalApi";
-import Loading from "./Loading";
+import SkeletonCard from "./SkeletonCard";
 
 const FoodCategories = () => {
   const { data, loading } =
     useLocalApi<FoodCategoriesResponse>(getFoodCategories); // promise function
   if (loading) {
-    return <Loading />;
+    return (
+      <SkeletonCard
+        headline="Order our best food options"
+        show={true}
+        room="w-[100px] md:w-[126px] lg:w-[170px] xl:w-[190px]
+               h-[100px] md:h-[126px] lg:h-[170px]"
+      />
+    );
   }
 
-  if (!data) {
-    return null;
-  }
+  const top = data?.top ?? [];
+  const more = data?.more ?? [];
 
-  const { top, more } = data;
   return (
     <div className="container-section">
       <h5 className="headline">Order our best food options</h5>

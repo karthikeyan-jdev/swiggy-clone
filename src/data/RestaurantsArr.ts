@@ -1,8 +1,22 @@
-export const restaurantsArr = [
-   {
+type restaurant = {
+  id: number;
+  name: string;
+  image: string;
+  rating: number;
+  deliveryTime: string;
+  cuisines: string[];
+  priceForTwo: string;
+  location: string;
+  veg: boolean;
+  offer: string;
+};
+
+export const restaurantsArr: restaurant[] = [
+  {
     id: 1,
     name: "KFC",
-    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/56c9ab92bd79745fd152a30fa2525426",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/56c9ab92bd79745fd152a30fa2525426",
     rating: 4.2,
     deliveryTime: "25–35 mins",
     cuisines: ["Burger", "Fast Food"],
@@ -14,7 +28,8 @@ export const restaurantsArr = [
   {
     id: 2,
     name: "McDonald's",
-    image: "https://media.istockphoto.com/id/821268888/photo/mcdonalds-restaurant-in-japan.jpg?s=612x612&w=0&k=20&c=cycoIf3HDQxCNr0jw5baRvvKFjDX5c5LjAecrPX9Y1I=",
+    image:
+      "https://media.istockphoto.com/id/821268888/photo/mcdonalds-restaurant-in-japan.jpg?s=612x612&w=0&k=20&c=cycoIf3HDQxCNr0jw5baRvvKFjDX5c5LjAecrPX9Y1I=",
     rating: 4.3,
     deliveryTime: "20–30 mins",
     cuisines: ["Burger", "American"],
@@ -35,19 +50,19 @@ export const restaurantsArr = [
     veg: false,
     offer: "Flat ₹120 OFF",
   },
- {
-  id: 3,
-  name: "Subway",
-  image: "https://images.pexels.com/photos/16094264/pexels-photo-16094264.jpeg",
-  rating: 4.1,
-  deliveryTime: "20–30 mins",
-  cuisines: ["Sandwiches", "Fast Food"],
-  priceForTwo: "₹300 for two",
-  location: "Velachery",
-  veg: true,
-  offer: "10% OFF",
-}
-,
+  {
+    id: 3,
+    name: "Subway",
+    image:
+      "https://images.pexels.com/photos/16094264/pexels-photo-16094264.jpeg",
+    rating: 4.1,
+    deliveryTime: "20–30 mins",
+    cuisines: ["Sandwiches", "Fast Food"],
+    priceForTwo: "₹300 for two",
+    location: "Velachery",
+    veg: true,
+    offer: "10% OFF",
+  },
   {
     id: 5,
     name: "Chicking",
@@ -241,3 +256,11 @@ export const restaurantsArr = [
     offer: "15% OFF",
   },
 ];
+
+export const getRestaurants = async (): Promise<restaurant[]> => {
+  return await new Promise((res) => {
+    setTimeout(() => {
+      res(restaurantsArr);
+    }, 3000);
+  });
+};

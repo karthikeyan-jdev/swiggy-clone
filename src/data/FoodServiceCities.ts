@@ -1,4 +1,6 @@
-export const foodServiceCities = [
+export type foodCity = { id: number; name: string };
+
+export const foodServiceCities: foodCity[] = [
   { id: 1, name: "Bangalore" },
   { id: 2, name: "Gurgaon" },
   { id: 3, name: "Hyderabad" },
@@ -18,5 +20,13 @@ export const foodServiceCities = [
   { id: 17, name: "Indore" },
   { id: 18, name: "Guwahati" },
   { id: 19, name: "Vizag" },
-  { id: 20, name: "Surat" }
+  { id: 20, name: "Surat" },
 ];
+
+export const getFoodServiceCities = async (): Promise<foodCity[]> => {
+  return await new Promise((res) => {
+    setTimeout(() => {
+      res(foodServiceCities);
+    }, 3500);
+  });
+};

@@ -1,8 +1,13 @@
-export type FoodCategory = {
-  id: number;
+export type FoodCategory = { // this for both top and more categories
+  id: number; 
   name: string;
   image: string;
 };
+export type FoodCategoriesResponse = {
+  top: FoodCategory[];
+  more: FoodCategory[];
+};
+
 export const FoodCategoriesData: FoodCategoriesResponse = {
   top: [
     {
@@ -129,10 +134,7 @@ export const FoodCategoriesData: FoodCategoriesResponse = {
     },
   ],
 };
-export type FoodCategoriesResponse = {
-  top: FoodCategory[];
-  more: FoodCategory[];
-};
+
 export const getFoodCategories = async (): Promise<FoodCategoriesResponse> => {
   return await new Promise((resolve) => {
     setTimeout(() => {

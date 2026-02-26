@@ -5,26 +5,32 @@ import GroceryCategories from "../components/GroceryCategories";
 import Restaurants from "../components/Restaurants";
 import CityServicesList from "../components/CityServicesList";
 import DownloadApp from "../components/DownloadApp";
-import { foodServiceCities } from "../data/FoodServiceCities";
-import { groceryServiceCities } from "../data/GroceryServiceCities";
+import { getFoodServiceCities } from "../data/FoodServiceCities";
+import { getGroceryServiceCities } from "../data/GroceryServiceCities";
+import useLocalApi from "../hooks/useLocalApi";
+import SkeletonCardCity from "../components/SkeletonCardCity";
 
 const Home = () => {
+  const { data } = useLocalApi(getFoodServiceCities);
+  const { data: groceryData } = useLocalApi(
+    getGroceryServiceCities,
+  );
   return (
     <div className="">
       <Categories />
       <GroceryCategories />
       <Restaurants />
       <DownloadApp />
-      <CityServicesList
-        prefix="Order food online in "
-        headline={"Cities with food delivery"}
-        cities={foodServiceCities}
-      />
-      <CityServicesList
-        prefix="Order food online in "
-        headline={"Cities with food grocery"}
-        cities={groceryServiceCities}
-      />
+      {data ? (
+        <CityServicesList label={"food"} data={data} />
+      ) : (
+        <SkeletonCardCity label={"food"} />
+      )}
+      {groceryData ? (
+        <CityServicesList label={"grocery"} data={groceryData} />
+      ) : (
+        <SkeletonCardCity label={"grocery"} />
+      )}
     </div>
   );
 };

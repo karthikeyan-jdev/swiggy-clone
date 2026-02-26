@@ -1,4 +1,6 @@
-export const groceryServiceCities = [
+type groceryCity = { id: number; name: string };
+
+export const groceryServiceCities: groceryCity[] = [
   { id: 1, name: "Bangalore" },
   { id: 2, name: "Gurgaon" },
   { id: 3, name: "Hyderabad" },
@@ -18,5 +20,13 @@ export const groceryServiceCities = [
   { id: 17, name: "Indore" },
   { id: 18, name: "Guwahati" },
   { id: 19, name: "Vizag" },
-  { id: 20, name: "Surat" }
+  { id: 20, name: "Surat" },
 ];
+
+export const getGroceryServiceCities = async (): Promise<groceryCity[]> => {
+  return await new Promise((res) => {
+    setTimeout(() => {
+      res(groceryServiceCities);
+    }, 3500);
+  });
+};
