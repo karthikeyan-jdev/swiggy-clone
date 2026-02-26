@@ -4,7 +4,6 @@ export type ServiceCard = {
   subtitle: string;
   offer: string;
   image: string;
-  imgClass: string;
   cardClass: string;
   cardimageClass: string;
 };
@@ -16,7 +15,6 @@ export const serviceCards: ServiceCard[] = [
     offer: "UP TO 60% OFF",
     image:
       "https://static.vecteezy.com/system/resources/thumbnails/070/116/360/small/delicious-chicken-biryani-with-garnish-in-white-bowl-on-transparent-background-png.png",
-    imgClass: "w-44 h-45 absolute right-[-30px]",
     cardClass:
       "col-span-2 md:col-span-1 h-[180px] sm:h-[230px] md:h-[236px] lg:h-[270px]",
     cardimageClass:
